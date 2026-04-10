@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 
 export default function Home() {
@@ -6,7 +7,6 @@ export default function Home() {
       <Navbar />
 
       <main>
-        {/* HERO */}
         <section style={styles.hero}>
           <h1 style={styles.title}>ACGIS</h1>
           <p style={styles.subtitle}>
@@ -15,13 +15,12 @@ export default function Home() {
           </p>
 
           <div style={styles.heroButtons}>
-            <a href="/contact" style={styles.primaryButton}>Request a Quote</a>
-            <a href="/services" style={styles.secondaryButton}>View Services</a>
-            <a href="/projects" style={styles.secondaryButton}>View Projects</a>
+            <Link to="/contact" style={styles.primaryButton}>Request a Quote</Link>
+            <Link to="/services" style={styles.secondaryButton}>View Services</Link>
+            <Link to="/projects" style={styles.secondaryButton}>View Projects</Link>
           </div>
         </section>
 
-        {/* WHAT WE DO */}
         <section style={styles.section}>
           <h2 style={styles.sectionTitle}>What We Do</h2>
           <p style={styles.sectionText}>
@@ -33,7 +32,6 @@ export default function Home() {
           </p>
         </section>
 
-        {/* SERVICES */}
         <section style={styles.sectionAlt}>
           <h2 style={styles.sectionTitle}>Services</h2>
           <div style={styles.servicesGrid}>
@@ -46,7 +44,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* PROJECTS PREVIEW */}
         <section style={styles.section}>
           <h2 style={styles.sectionTitle}>Selected Projects</h2>
           <p style={styles.sectionText}>
@@ -61,13 +58,12 @@ export default function Home() {
           </div>
 
           <div style={{ marginTop: '30px' }}>
-            <a href="/projects" style={styles.primaryButton}>
+            <Link to="/projects" style={styles.primaryButton}>
               Open Projects Page
-            </a>
+            </Link>
           </div>
         </section>
 
-        {/* WHY CHOOSE */}
         <section style={styles.sectionAlt}>
           <h2 style={styles.sectionTitle}>Why Choose ACGIS</h2>
           <div style={styles.whyList}>
@@ -78,16 +74,15 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CONTACT */}
         <section style={styles.contactSection}>
           <h2 style={styles.contactTitle}>Get in Touch</h2>
           <p style={styles.contactText}>
             Contact ACGIS to discuss your project, request technical support,
             or ask for a quote.
           </p>
-          <a href="/contact" style={styles.contactButton}>
+          <Link to="/contact" style={styles.contactButton}>
             Open Contact Form
-          </a>
+          </Link>
         </section>
       </main>
     </div>
@@ -101,12 +96,12 @@ const styles = {
     background: 'linear-gradient(to bottom, #f8fbff, #ffffff)',
   },
   title: {
-    fontSize: '72px',
+    fontSize: 'clamp(36px, 8vw, 72px)',
     marginBottom: '20px',
     color: '#0b1f5c',
   },
   subtitle: {
-    fontSize: '24px',
+    fontSize: 'clamp(16px, 4vw, 24px)',
     maxWidth: '900px',
     margin: '0 auto',
     color: '#4b5563',
