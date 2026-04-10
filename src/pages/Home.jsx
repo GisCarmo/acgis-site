@@ -57,7 +57,7 @@ export default function Home() {
             <div style={styles.card}>LiDAR & Photogrammetry</div>
           </div>
 
-          <div style={{ marginTop: '30px' }}>
+          <div style={styles.projectsButtonWrap}>
             <Link to="/projects" style={styles.primaryButton}>
               Open Projects Page
             </Link>
@@ -92,7 +92,7 @@ export default function Home() {
 const styles = {
   hero: {
     textAlign: 'center',
-    padding: '110px 20px 90px',
+    padding: '80px 16px 60px',
     background: 'linear-gradient(to bottom, #f8fbff, #ffffff)',
   },
   title: {
@@ -109,10 +109,10 @@ const styles = {
   },
   heroButtons: {
     display: 'flex',
-    justifyContent: 'center',
-    gap: '16px',
+    flexDirection: 'column',
+    gap: '12px',
     marginTop: '30px',
-    flexWrap: 'wrap',
+    alignItems: 'center',
   },
   primaryButton: {
     textDecoration: 'none',
@@ -121,6 +121,9 @@ const styles = {
     padding: '12px 20px',
     borderRadius: '8px',
     fontWeight: '600',
+    width: '100%',
+    maxWidth: '300px',
+    textAlign: 'center',
   },
   secondaryButton: {
     textDecoration: 'none',
@@ -129,25 +132,28 @@ const styles = {
     padding: '12px 20px',
     borderRadius: '8px',
     fontWeight: '600',
+    width: '100%',
+    maxWidth: '300px',
+    textAlign: 'center',
   },
   section: {
-    padding: '80px 20px',
+    padding: '70px 16px',
     maxWidth: '1100px',
     margin: '0 auto',
     textAlign: 'center',
   },
   sectionAlt: {
-    padding: '80px 20px',
+    padding: '70px 16px',
     backgroundColor: '#f8fbff',
     textAlign: 'center',
   },
   sectionTitle: {
-    fontSize: '36px',
+    fontSize: 'clamp(24px, 6vw, 36px)',
     marginBottom: '20px',
     color: '#0b1f5c',
   },
   sectionText: {
-    fontSize: '20px',
+    fontSize: 'clamp(16px, 4vw, 20px)',
     color: '#4b5563',
     maxWidth: '900px',
     margin: '0 auto',
@@ -156,9 +162,10 @@ const styles = {
   servicesGrid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-    gap: '20px',
+    gap: '16px',
     maxWidth: '1100px',
     margin: '40px auto 0',
+    padding: '0 10px',
   },
   card: {
     backgroundColor: '#ffffff',
@@ -168,25 +175,30 @@ const styles = {
     fontWeight: '600',
     color: '#1f2937',
   },
+  projectsButtonWrap: {
+    marginTop: '30px',
+    display: 'flex',
+    justifyContent: 'center',
+  },
   whyList: {
     display: 'grid',
     gap: '14px',
-    fontSize: '20px',
+    fontSize: 'clamp(16px, 4vw, 20px)',
     color: '#4b5563',
     marginTop: '30px',
   },
   contactSection: {
-    padding: '80px 20px 100px',
+    padding: '70px 16px 90px',
     backgroundColor: '#0b1f5c',
     textAlign: 'center',
   },
   contactTitle: {
-    fontSize: '36px',
+    fontSize: 'clamp(24px, 6vw, 36px)',
     marginBottom: '20px',
     color: '#ffffff',
   },
   contactText: {
-    fontSize: '20px',
+    fontSize: 'clamp(16px, 4vw, 20px)',
     color: '#dbeafe',
     maxWidth: '900px',
     margin: '0 auto 30px',
@@ -200,5 +212,8 @@ const styles = {
     padding: '14px 22px',
     borderRadius: '10px',
     fontWeight: '600',
+    width: '100%',
+    maxWidth: '300px',
+    textAlign: 'center',
   },
 }

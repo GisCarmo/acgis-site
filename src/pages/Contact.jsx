@@ -42,7 +42,6 @@ export default function Contact() {
               style={styles.input}
               required
             />
-
             <ValidationError prefix="Name" field="name" errors={state.errors} />
 
             <input
@@ -53,7 +52,6 @@ export default function Contact() {
               style={styles.input}
               required
             />
-
             <ValidationError prefix="Email" field="email" errors={state.errors} />
 
             <input
@@ -63,7 +61,6 @@ export default function Contact() {
               placeholder="Company"
               style={styles.input}
             />
-
             <ValidationError prefix="Company" field="company" errors={state.errors} />
 
             <input
@@ -73,7 +70,6 @@ export default function Contact() {
               placeholder="Project Type"
               style={styles.input}
             />
-
             <ValidationError prefix="Project Type" field="project_type" errors={state.errors} />
 
             <textarea
@@ -83,7 +79,6 @@ export default function Contact() {
               style={styles.textarea}
               required
             />
-
             <ValidationError prefix="Message" field="message" errors={state.errors} />
 
             <button type="submit" disabled={state.submitting} style={styles.button}>
@@ -102,7 +97,7 @@ const styles = {
   main: {
     minHeight: '100vh',
     backgroundColor: '#ffffff',
-    padding: '80px 20px',
+    padding: '70px 16px',
   },
   hero: {
     textAlign: 'center',
@@ -110,12 +105,12 @@ const styles = {
     margin: '0 auto 40px',
   },
   title: {
-    fontSize: '52px',
+    fontSize: 'clamp(28px, 7vw, 52px)',
     color: '#0b1f5c',
     marginBottom: '16px',
   },
   subtitle: {
-    fontSize: '20px',
+    fontSize: 'clamp(16px, 4vw, 20px)',
     color: '#4b5563',
     lineHeight: '1.8',
   },
@@ -125,7 +120,7 @@ const styles = {
   },
   formCard: {
     backgroundColor: '#f8fbff',
-    padding: '36px',
+    padding: '24px',
     borderRadius: '16px',
     boxShadow: '0 6px 18px rgba(0,0,0,0.06)',
     display: 'flex',
@@ -133,6 +128,7 @@ const styles = {
     gap: '16px',
   },
   input: {
+    width: '100%',
     padding: '14px 16px',
     borderRadius: '10px',
     border: '1px solid #d1d5db',
@@ -140,6 +136,7 @@ const styles = {
     outline: 'none',
   },
   textarea: {
+    width: '100%',
     minHeight: '160px',
     padding: '14px 16px',
     borderRadius: '10px',
@@ -149,6 +146,7 @@ const styles = {
     resize: 'vertical',
   },
   button: {
+    width: '100%',
     padding: '14px 16px',
     borderRadius: '10px',
     border: 'none',
